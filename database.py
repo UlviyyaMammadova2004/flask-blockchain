@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 # MongoDB Atlas bağlantı URI (şifreni <db_password> kısmına yazmalısın)
-client = MongoClient("mongodb+srv://MammadovaMammadova:<db_password>@clusteblockchain.y2cgmgr0.mongodb.net/")
+client = MongoClient("mongodb+srv://MammadovaMammadova:<Coppy1997>@clusteblockchain.y2cgmgr0.mongodb.net/")
 
 # Veritabanı ve koleksiyon adı
 db = client["blockchain_db"]
