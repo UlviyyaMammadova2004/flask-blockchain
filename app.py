@@ -6,6 +6,11 @@ from database import save_block_to_db
 app = Flask(__name__)
 blockchain = Blockchain()
 
+# Ana sayfa için yönlendirme
+@app.route('/')
+def home():
+    return 'Flask Blockchain App is Running!'
+
 @app.route('/add-data', methods=['POST'])
 def add_data():
     content = request.json
@@ -36,4 +41,3 @@ if __name__ == '__main__':
     import os
     port = int(os.environ.get("PORT", 8080))  # Azure 8080 kullanır
     app.run(host='0.0.0.0', port=port)
-
