@@ -33,5 +33,7 @@ def get_chain():
     return jsonify(chain_data), 200
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80)
+    import os
+    port = int(os.environ.get("PORT", 8080))  # Azure 8080 kullanır
+    app.run(host='0.0.0.0', port=port)
 
